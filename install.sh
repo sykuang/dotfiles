@@ -10,3 +10,7 @@ if [[ ! -f $XDG_CONFIG_HOME/nvim/init.vim ]];then
 mkdir -p $XDG_CONFIG_HOME/nvim/
 ln -s $SCRIPT_PATH/init.vim $XDG_CONFIG_HOME/nvim/init.vim
 fi
+
+if [[ ! -f $HOME/.gitignore ]];then
+  ln -s $SCRIPT_PATH/gitconfig $HOME/.gitconfig
+fi
