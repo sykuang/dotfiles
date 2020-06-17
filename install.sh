@@ -15,6 +15,10 @@ if [[ ! -f $HOME/.gitconfig ]];then
   ln -s $SCRIPT_PATH/gitconfig $HOME/.gitconfig
 fi
 
+if [[ ! -f $HOME/.config/starship.toml ]];then
+  ln -s $SCRIPT_PATH/starship.toml $HOME/.config/starship.toml
+fi
+
 if [[ ! -f $HOME/.zshrc ]];then
   ln -s $SCRIPT_PATH/zshrc/zshrc $HOME/.zshrc
 fi
