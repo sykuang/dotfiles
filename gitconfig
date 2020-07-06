@@ -5,7 +5,8 @@
     email = sykuang.tw@gmail.com
 [core]
     pager = diff-so-fancy | less --tabs=4 -RFX
-    editor = nvim
+	editor = nvim
+	excludesfile = /home/ken/.gitignore
 [color]
 	ui = true
 [color "diff-highlight"]
@@ -22,3 +23,5 @@
 	whitespace = red reverse
 [pull]
 	rebase = true
+[gitreview]
+	remote = origin
