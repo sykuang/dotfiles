@@ -23,6 +23,10 @@ if [[ ! -f $HOME/.config/starship.toml ]];then
   ln -s $SCRIPT_PATH/starship.toml $HOME/.config/starship.toml
 fi
 
+if [[ ! -f $HOME/.config/nvim/coc-settings.json ]];then
+  ln -s $SCRIPT_PATH/coc-settings.json $HOME/.config/nvim/coc-settings.json
+fi
+
 if [[ ! -f $HOME/.zshrc ]];then
   if [ -z `which exa` ];then
     echo "Please install exa for zshrc"
