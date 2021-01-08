@@ -27,17 +27,7 @@ if [[ ! -f $HOME/.config/nvim/coc-settings.json ]];then
   ln -s $SCRIPT_PATH/coc-settings.json $HOME/.config/nvim/coc-settings.json
 fi
 
-if [[ ! -f $HOME/.zshrc ]];then
-  if [ -z `which exa` ];then
-    echo "Please install exa for zshrc"
-    exit 1
-  fi
-  if [ -z `which svn` ];then
-    echo "Please install svn for zshrc"
-    exit 1
-  fi
-  ln -s $SCRIPT_PATH/zshrc/zshrc $HOME/.zshrc
-fi
+[[ -f $SCRIPT_PATH/zshrc/install.sh ]] && $SCRIPT_PATH/zshrc/install.sh
 
 if [[ ! -f $HOME/.vimrc ]];then
   ln -s $SCRIPT_PATH/vimrc/vimrc $HOME/.vimrc
