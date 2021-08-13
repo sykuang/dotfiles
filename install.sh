@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SCRIPT_PATH=$(dirname $(realpath -s $0))
+SCRIPT_PATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
 if [[ -z `which curl` && -z `which wget` && -z `which lftp` ]];then
   echo "Please install one of below command: curl,wget or lftp"
