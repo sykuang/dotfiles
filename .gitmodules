@@ -4,3 +4,6 @@
 [submodule "vimrc"]
 	path = vimrc
 	url = https://github.com/sykuang/kvimrc.git
+[submodule "nvim-config"]
+	path = nvim-config
+	url = https://github.com/sykuang/nvim-config.git

@@ -10,9 +10,11 @@ if [[ ! -f $HOME/.config/alacritty/alacritty.yml ]];then
 mkdir -p $XDG_CONFIG_HOME/alacritty/
 ln -s $SCRIPT_PATH/alacritty.yml $XDG_CONFIG_HOME/alacritty/alacritty.yml
 fi
-if [[ ! -f $XDG_CONFIG_HOME/nvim/init.vim ]];then
-mkdir -p $XDG_CONFIG_HOME/nvim/
-ln -s $SCRIPT_PATH/init.vim $XDG_CONFIG_HOME/nvim/init.vim
+if [[ ! -f $XDG_CONFIG_HOME/nvim ]];then
+  ln -s $SCRIPT_PATH/nvim-config $XDG_CONFIG_HOME/nvim
+  if [[ -f $SCRIPT_PATH/nvim-config/install.sh ]];then
+  $SCRIPT_PATH/nvim-config/install.sh
+  fi
 fi
 
 if [[ ! -f $HOME/.gitconfig ]];then
@@ -23,9 +25,9 @@ if [[ ! -f $HOME/.config/starship.toml ]];then
   ln -s $SCRIPT_PATH/starship.toml $HOME/.config/starship.toml
 fi
 
-if [[ ! -f $HOME/.config/nvim/coc-settings.json ]];then
-  ln -s $SCRIPT_PATH/coc-settings.json $HOME/.config/nvim/coc-settings.json
-fi
+# if [[ ! -f $HOME/.config/nvim/coc-settings.json ]];then
+  # ln -s $SCRIPT_PATH/coc-settings.json $HOME/.config/nvim/coc-settings.json
+# fi
 
 [[ -f $SCRIPT_PATH/zshrc/install.sh ]] && $SCRIPT_PATH/zshrc/install.sh
 
