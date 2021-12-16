@@ -2,22 +2,10 @@
 font:
   # The normal (roman) font face to use.
   normal:
-    family: Droid Sans Mono Slashed for Powerline
+    family: "MesloLGS NF"
     # Style can be specified to pick a specific face.
     style: Regular
 
-  # The bold font face
-  bold:
-    family: Droid Sans Mono Slashed for Powerline
-    # Style can be specified to pick a specific face.
-    # style: Bold
-
-  # The italic font face
-  italic:
-    family: Droid Sans Mono Slashed for Powerline
-    # Style can be specified to pick a specific face.
-    # style: Italic
-    #
   size: 20
 # Colors (Dracula)
 colors:
