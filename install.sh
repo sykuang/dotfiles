@@ -4,7 +4,7 @@ SCRIPT_PATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
 
 if [[ -z `which curl` && -z `which wget` && -z `which lftp` ]];then
-  echo "Please install one of below command: curl,wget or lftp"
+  echo "Please install one of below command: curl, wget or lftp"
   exit 1
 fi
 
@@ -23,11 +23,6 @@ fi
 # Setup for git config
 if [[ ! -f $HOME/.gitconfig ]];then
   ln -s $SCRIPT_PATH/gitconfig $HOME/.gitconfig
-fi
-
-# Setup for starship
-if [[ ! -f $HOME/.config/starship.toml ]];then
-  ln -s $SCRIPT_PATH/starship.toml $HOME/.config/starship.toml
 fi
 
 # Setup zshrc
