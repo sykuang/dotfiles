@@ -173,13 +173,16 @@ zinit ice pip"bpytop <- !bpytop -> top" id-as"bpytop"
 zinit load zdharma-continuum/null
 
 # Pygments
-zinit ice pip"Pygments" id-as"Pygments" as"command" pick"venv/bin/pygmentize"
+zinit ice pip"Pygments" id-as"Pygments" as"command" pick"venv/bin/pygmentize" atload"alias ccat=pygmentize"
 zinit load zdharma-continuum/null
 
 # shellcheck
 zinit ice lucid from="gh-r" as"program" sbin"shellcheck" mv"*/shellcheck -> shellcheck"
 zinit load koalaman/shellcheck
 
+# black
+zinit ice pip"black" id-as"black" as"command" pick"venv/bin/black"
+zinit load zdharma-continuum/null
 # Auto pushd
 zinit ice id-as"autopushd" as=null atload="setopt autopushd pushdminus pushdsilent pushdtohome"
 zinit load zdharma-continuum/null
