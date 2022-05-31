@@ -184,6 +184,16 @@ zinit load koalaman/shellcheck
 # black
 zinit ice pip"black" id-as"black" as"program" sbin"venv/bin/black"
 zinit load zdharma-continuum/null
+
+# neovim-remote
+zinit ice pip"neovim-remote" id-as"neovim-remote" as"program" sbin"venv/bin/nvr" \
+  atload'
+    nvs(){
+      nvim --listen /tmp/nvimsocket $@
+    }
+  '
+zinit load zdharma-continuum/null
+
 # Auto pushd
 zinit ice id-as"autopushd" as=null atload="setopt autopushd pushdminus pushdsilent pushdtohome"
 zinit load zdharma-continuum/null
@@ -192,8 +202,8 @@ zinit load zdharma-continuum/null
 zinit ice id-as"alias" as=null \
   atload'
   alias jj="jobs"
-  alias cgrep="rg -g \*.c -g \*.h -g \*.cpp -g \*.cc"
-  alias mgrep="rg -g \*.mk -g Makefile -g makefile"
+  alias cgrep="rg -t c -t cpp"
+  alias mgrep="rg -t make"
   alias bb="byobu"
   ' 
 zinit load zdharma-continuum/null
