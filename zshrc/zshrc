@@ -126,7 +126,7 @@ zinit ice lucid wait"2" as"completion"
 zinit snippet "https://github.com/ogham/exa/blob/master/completions/zsh/_exa"
 
 # n-install for node
-zinit ice lucid as"program" atclone"export N_PREFIX=$HOME/.n;bash n lts" atload"export N_PREFIX=$HOME/.n;path+=(\$N_PREFIX/bin)"
+zinit ice lucid as"program" atclone"export N_PREFIX=$HOME/.n;bash n lts" atload"export N_PREFIX=$HOME/.n;path=("\$N_PREFIX/bin" \$path)"
 zinit snippet "https://github.com/tj/n/blob/master/bin/n"
 
 # nvim
