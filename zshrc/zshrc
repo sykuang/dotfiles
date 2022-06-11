@@ -153,7 +153,7 @@ zinit id-as"rust" wait=1 as=null sbin="bin/*" lucid rustup \
 
 # pyenv
 zinit lucid as'command' pick'bin/pyenv' atinit'export PYENV_ROOT="$PWD"' \
-  atclone'PYENV_ROOT="$PWD" ./libexec/pyenv init - > zpyenv.zsh;PYENV_ROOT="$PWD" ./libexec/pyenv install 3.10.1;PYENV_ROOT="$PWD" ./libexec/pyenv global 3.10.1' \
+  atclone'PYENV_ROOT="$PWD" ./libexec/pyenv init - > zpyenv.zsh;PYENV_ROOT="$PWD" ./libexec/pyenv install 3.10.1;PYENV_ROOT="$PWD" ./libexec/pyenv global 3.10.1;git clone https://github.com/s1341/pyenv-alias.git plugins/pyenv-alias' \
   atpull"%atclone" src"zpyenv.zsh" nocompile'!' atload'eval "$(pyenv init --path)"' for \
   pyenv/pyenv
 
