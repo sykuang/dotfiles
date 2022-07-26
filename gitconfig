@@ -6,7 +6,7 @@
 [core]
     pager = diff-so-fancy | less --tabs=4 -RFX
 	editor = nvim
-	excludesfile = /home/ken/.gitignore
+	excludesfile = /home/sykuang/.gitignore
 [color]
 	ui = true
 [color "diff-highlight"]
@@ -25,3 +25,7 @@
 	rebase = true
 [gitreview]
 	remote = origin
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
