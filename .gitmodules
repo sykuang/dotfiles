@@ -1,6 +1,6 @@
 [submodule "nvim-config"]
 	path = nvim-config
-	url = git@github.com:sykuang/nvim-config.git
+	url = ../nvim-config
 [submodule "zshrc"]
 	path = zshrc
-	url = git@github.com:sykuang/kzshrc.git
+	url = ../kzshrc
