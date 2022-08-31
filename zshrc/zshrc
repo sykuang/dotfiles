@@ -45,9 +45,10 @@ zinit wait lucid for \
  atload"!_zsh_autosuggest_start" \
     zsh-users/zsh-autosuggestions
 
-# git diff so fancy
-zinit ice lucid wait="2" lucid as"program" pick"bin/git-dsf"
-zinit light zdharma-continuum/zsh-diff-so-fancy
+# git-delta
+zinit ice from"gh-r" id-as"git-delta" as"program" pick"*/delta" lucid
+zinit light dandavison/delta
+
 
 # Extending Git
 zinit as"null" wait"1" lucid for \
