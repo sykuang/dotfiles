@@ -22,3 +22,9 @@ fi
 
 # Setup zshrc
 [[ -f "$SCRIPT_PATH/zshrc/install.sh" ]] && "$SCRIPT_PATH/zshrc/install.sh"
+
+# Setup for autoenv
+if [[ ! -f $HOME/.autoenv.zsh ]];then
+  ln -s "$SCRIPT_PATH/.autoenv.zsh" "$HOME/.autoenv.zsh"
+fi
+
