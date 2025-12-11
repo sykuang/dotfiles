@@ -22,6 +22,4 @@ if [[ ! -f $HOME/.autoenv.zsh ]];then
 fi
 
 # Setup for wezterm
-if [[ ! -f $HOME/.wezterm.lua ]];then
-  ln -s "$SCRIPT_PATH/wezterm.lua" "$HOME/.wezterm.lua"
-fi
+[[ -f $SCRIPT_PATH/wezterm/install.sh ]] && "$SCRIPT_PATH/wezterm/install.sh"
