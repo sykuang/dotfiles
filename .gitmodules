@@ -4,6 +4,3 @@
 [submodule "zshrc"]
 	path = zshrc
 	url = ../kzshrc
-[submodule "wezterm"]
-	path = wezterm
-	url = https://github.com/sykuang/wezterm.git
